@@ -30,6 +30,7 @@
 @gray: #999999;
 @dark: #232323;
 @black: #000000;
+@danger: #b63737;
 @red: #dd1111;
 @dark-red: #a00000;
 @primary: rgba(61, 146, 224, 1.0);
@@ -109,6 +110,14 @@
   color: @white; 
   &:hover {
     background-color: @dark-red/2;
+    transition-duration: 0.5s;
+  }
+}
+.btn-danger {
+  background-color: @danger;
+  color: @white; 
+  &:hover {
+    background-color: @danger/2;
     transition-duration: 0.5s;
   }
 }

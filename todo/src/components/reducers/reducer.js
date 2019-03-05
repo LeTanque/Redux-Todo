@@ -1,4 +1,4 @@
-import {UPDATE_TITLE, MARK_TASK_COMPLETE} from '../actions'
+import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED} from '../actions'
 
 const initialState = {
     title: 'Todo List',
@@ -36,6 +36,21 @@ function reducer(state = initialState, action) {
                     }
                     return task
                 })
+            }
+
+        case CLEAR_COMPLETED:
+        console.log(state)
+            return {
+                ...state,
+                todoList: state.todoList.filter(task => {
+                    if (!task.completed) {
+                        return {
+                            ...task,
+                        }
+                    }
+                })
+
+
             }
 
         default:

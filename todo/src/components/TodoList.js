@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 
-import {markTaskComplete} from './actions'
+import {markTaskComplete, clearCompleted} from './actions'
 
 
 class TodoList extends Component {
@@ -14,8 +14,10 @@ class TodoList extends Component {
         this.props.markTaskComplete(id);
     }
 
-    taskStyle = () => {
-        return " complete "
+    clearCompleted = () => {
+        // console.log('clear completed has been pressed');
+        this.props.clearCompleted();
+
     }
 
     render() {
@@ -23,25 +25,32 @@ class TodoList extends Component {
         
         return (
             <Fragment>
-    
-                <div>
-                    <ul>
 
-                        {this.props.todoList.map(item => (
+                <ul className='todo-list'>
 
-                            <Fragment key={item.id} >
-                                <li 
-                                    onClick={() => this.markTaskComplete(item.id)} 
-                                    className={`task ${item.completed ? "completed" : ""}`}
-                                >
-                                    {item.todoItem}
-                                </li>
-                            </Fragment>
+                    {this.props.todoList.map(item => (
 
-                        ))}
+                        <Fragment key={item.id} >
+                            <li 
+                                onClick={() => this.markTaskComplete(item.id)} 
+                                className={`task ${item.completed ? "completed" : ""}`}
+                            >
 
-                    </ul>
-                </div>
+                                {item.todoItem}
+
+                            </li>
+                        </Fragment>
+
+                    ))}
+
+                </ul>
+
+                <button 
+                    className="btn-danger"
+                    onClick={this.clearCompleted}
+                >
+                    clear
+                </button>
     
             </Fragment>
         )
@@ -55,5 +64,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    {markTaskComplete}
+    {markTaskComplete, clearCompleted}
 )(TodoList);
