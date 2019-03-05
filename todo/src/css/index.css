@@ -428,3 +428,19 @@ body {
   text-align: center;
   margin: 20px;
 }
+h1.heading-title svg {
+  font-size: 1.6rem;
+}
+.update-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.update-form input {
+  border: none;
+  font-size: 2rem;
+  padding: 5px;
+}
+.update-form button {
+  margin-top: 0;
+}
