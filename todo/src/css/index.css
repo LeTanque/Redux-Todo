@@ -372,22 +372,6 @@ button:active::after {
 .cblack {
   color: #000000;
 }
-a {
-  color: #3d92e0;
-  text-decoration: none;
-}
-a:hover {
-  color: #1f4970;
-  transition-duration: 0.5s;
-}
-.font-title {
-  font-family: 'Roboto', sans-serif;
-}
-.font-logo {
-  font-family: 'Roboto Mono', monospace;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
 .btn-gray {
   background-color: #999999;
   color: #232323;
@@ -419,6 +403,27 @@ a:hover {
 .btn-primary:hover {
   background-color: #1f4970;
   transition-duration: 0.5s;
+}
+a {
+  color: #3d92e0;
+  text-decoration: none;
+}
+a:hover {
+  color: #1f4970;
+  transition-duration: 0.5s;
+}
+.font-title {
+  font-family: 'Roboto', sans-serif;
+}
+.font-logo {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.completed {
+  text-decoration-line: line-through;
+  font-style: italic;
+  color: rgba(55, 55, 55, 0.5);
 }
 body {
   background: linear-gradient(135deg, #50c9c3, #96deda);

@@ -26,8 +26,8 @@ class Title extends Component {
     }
     
     render() {
-        console.log(this.state)
-        console.log(this.props.updateTitle)
+        // console.log(this.state)
+        // console.log(this.props.updateTitle)
         return (
             <Fragment>
                 

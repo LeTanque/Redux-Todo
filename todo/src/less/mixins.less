@@ -72,26 +72,52 @@
 }
 
 // Buttons
-.btn(@btn-bg-color; @btn-color; @btn-color-hover: @btn-bg-color; @btn-bg-color-hover: @btn-color;  @btn-width: 50%;  @btn-border-radius: 0;  @btn-font-size: 1.8rem;  @btn-padding: 8px 10px) {
+.btn ( @btn-bg-color: @button-bg-color;  @btn-color: @white;) {
   background-color: @btn-bg-color;
   color: @btn-color;
-  border-radius: @btn-border-radius;
-  font-size: @btn-font-size;
+  border-radius: 0;
+  font-size: 1.8rem;
   font-weight: bolder;
   text-align: center;
-  width: @btn-width;
+  width: 50%;
   min-width: 100px;
-  padding: @btn-padding;
+  padding: 8px 10px;
   border: 0;
   text-decoration: none;
   cursor: pointer;
   &:hover{
-    color: @btn-color-hover;
-    background-color: @btn-bg-color-hover;
+    background-color: @btn-bg-color/2;
+    color: @btn-color;
     .transition(0.75s);
   }
   @media @phone {
     width: 70%;
+  }
+}
+.btn-gray { background-color: @gray; color: @dark; }
+.btn-clear { background-color: @clear-color; color: @white; }
+.btn-green { 
+  background-color: @green; 
+  color: @white; 
+  &:hover {
+    background-color: @green/2;
+    transition-duration: 0.5s;
+  }
+}
+.btn-red { 
+  background-color: @dark-red; 
+  color: @white; 
+  &:hover {
+    background-color: @dark-red/2;
+    transition-duration: 0.5s;
+  }
+}
+.btn-primary { 
+  background-color: @primary; 
+  color: @white; 
+  &:hover {
+    background-color: @primary/2;
+    transition-duration: 0.5s;
   }
 }
 
@@ -106,8 +132,6 @@
     .transition(@transition-duration);
   }  
 }
-
-
 
 // Links
 .link(@link-fg-color; @link-bg-color; @link-bold: 600) {
@@ -130,7 +154,6 @@
     }
   }
 }
-
 a { 
   color: @links;
   text-decoration: none;
@@ -162,7 +185,7 @@ a {
   letter-spacing: 5px;
 }
 
-// shadows
+// Shadows
 .font-shadow(@font-shadow-x: 1px;@font-shadow-y: 1px;@font-shadow-blur: 5px;@font-shadow-color: black) {
   text-shadow: @font-shadow-x @font-shadow-y @font-shadow-blur @font-shadow-color;
 }
@@ -170,30 +193,9 @@ a {
   box-shadow: @box-shadow-x @box-shadow-y @box-shadow-blur @box-shadow-spread @box-shadow-color;
 }
 
-// Buttons
-.btn-gray { background-color: @gray; color: @dark; }
-.btn-clear { background-color: @clear-color; color: @white; }
-.btn-green { 
-  background-color: @green; 
-  color: @white; 
-  &:hover {
-    background-color: @green/2;
-    transition-duration: 0.5s;
-  }
-}
-.btn-red { 
-  background-color: @dark-red; 
-  color: @white; 
-  &:hover {
-    background-color: @dark-red/2;
-    transition-duration: 0.5s;
-  }
-}
-.btn-primary { 
-  background-color: @primary; 
-  color: @white; 
-  &:hover {
-    background-color: @primary/2;
-    transition-duration: 0.5s;
-  }
+// Dynamic styling
+.completed {
+  text-decoration-line: line-through;
+  font-style: italic;
+  color: @light-gray;
 }

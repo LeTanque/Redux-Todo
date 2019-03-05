@@ -9,3 +9,11 @@ export function updateTitle(newTitle) {
     }
 }
 
+export const MARK_TASK_COMPLETE = 'MARK_TASK_COMPLETE';
+
+export function markTaskComplete(completeTask) {
+    return {
+        type: MARK_TASK_COMPLETE,
+        payload: completeTask
+    }
+}
