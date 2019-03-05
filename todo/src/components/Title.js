@@ -8,7 +8,7 @@ const Title = () => {
     return (
         <Fragment>
 
-            <h3 className='brand-title'></h3>
+            <div className='brand-title'></div>
 
         </Fragment>
     )

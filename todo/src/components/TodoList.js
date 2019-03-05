@@ -5,7 +5,7 @@ const TodoList = props => {
     return (
         <Fragment>
 
-            <h3>†</h3>
+            <div className="h3">†</div>
 
             <div></div>
 
