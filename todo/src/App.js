@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addTodo, completeTodo, clearTodo } from './components/actions';
+
+import { updateTitle } from './components/actions';
+import TodoList from './components/TodoList';
+import Title from './components/Title';
 
 
 class App extends Component {
+
   render() {
+    console.log(this.props)
     return (
       <div className="App">
-        <h1 className='brand-title'>Todo list</h1>
+        
 
+        <Title />
+        <TodoList />
 
       </div>
     );
@@ -19,7 +26,7 @@ class App extends Component {
 // component.
 const mapStateToProps = (state) => {
   return {
-      todoList: state
+      ...state
   };
 };
 
@@ -27,4 +34,4 @@ const mapStateToProps = (state) => {
 // Without this, this component is only a dumb react component.
 // We pass in all the functions that are reliant on Redux along with the 
 // component itself, so that redux makes itself known to this component.
-export default connect(mapStateToProps, {addTodo, completeTodo, clearTodo})(App);
+export default connect(mapStateToProps, {updateTitle})(App);
