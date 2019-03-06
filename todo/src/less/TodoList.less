@@ -1,15 +1,15 @@
 .todo-form {
     margin-top: 50px;
-    form {
-        input {
-            background-color: @bg-color*1.05;
+}
+form {
+    input {
+        background-color: @clear-color;
+        color: @white;
+        font-weight: bolder;
+        .box-shadow(0;0;8px;0;@light-gray);
+        &::placeholder {
             color: @white;
-            font-weight: bolder;
-            .box-shadow(0;0;8px;0;@light-gray);
-            &::placeholder {
-                color: @white;
-                font-weight: 400;
-            }
+            font-weight: 400;
         }
     }
 }

@@ -432,7 +432,7 @@ a:hover {
   color: rgba(55, 55, 55, 0.5);
 }
 body {
-  background: linear-gradient(135deg, #50c9c3, #96deda);
+  background: linear-gradient(-33deg, #aa4b6b, #6b6b83, #3b8d99);
   height: 97.5vh;
 }
 .App {
@@ -458,13 +458,13 @@ h1.heading-title svg {
 .todo-form {
   margin-top: 50px;
 }
-.todo-form form input {
-  background-color: #54d3cd;
+form input {
+  background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   font-weight: bolder;
   box-shadow: 0 0 8px 0 rgba(55, 55, 55, 0.5);
 }
-.todo-form form input::placeholder {
+form input::placeholder {
   color: #ffffff;
   font-weight: 400;
 }
