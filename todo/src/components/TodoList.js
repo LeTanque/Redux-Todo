@@ -15,7 +15,6 @@ class TodoList extends Component {
     }
 
     clearCompleted = () => {
-        // console.log('clear completed has been pressed');
         this.props.clearCompleted();
     }
 
@@ -30,8 +29,9 @@ class TodoList extends Component {
             <Fragment>
 
                 <section  className='todo-form'>
-                    <h4>Add a new task:</h4>
-                    
+                    <form>
+                        <input placeholder='New task...' />
+                    </form>
                 </section>
 
                 <ul className='todo-list'>
