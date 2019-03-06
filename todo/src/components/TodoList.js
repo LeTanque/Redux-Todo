@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 
-import {markTaskComplete, clearCompleted} from './actions'
+import {markTaskComplete, clearCompleted, addTask} from './actions'
 
 
 class TodoList extends Component {
@@ -17,7 +17,10 @@ class TodoList extends Component {
     clearCompleted = () => {
         // console.log('clear completed has been pressed');
         this.props.clearCompleted();
+    }
 
+    addTask = () => {
+        this.props.addTask();
     }
 
     render() {
@@ -25,6 +28,11 @@ class TodoList extends Component {
         
         return (
             <Fragment>
+
+                <section  className='todo-form'>
+                    <h4>Add a new task:</h4>
+                    
+                </section>
 
                 <ul className='todo-list'>
 
@@ -64,5 +72,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    {markTaskComplete, clearCompleted}
+    {markTaskComplete, clearCompleted, addTask}
 )(TodoList);

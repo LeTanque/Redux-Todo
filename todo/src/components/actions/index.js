@@ -25,3 +25,12 @@ export function clearCompleted(clearCompleted) {
         payload: clearCompleted
     }
 }
+
+export const ADD_TASK = 'ADD_TASK';
+
+export function addTask(newTask) {
+    return {
+        type: ADD_TASK,
+        payload: newTask
+    }
+}

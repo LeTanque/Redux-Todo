@@ -1,4 +1,4 @@
-import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED} from '../actions'
+import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED, ADD_TASK} from '../actions'
 
 const initialState = {
     title: 'Todo List',
@@ -49,8 +49,11 @@ function reducer(state = initialState, action) {
                         }
                     }
                 })
+            }
 
-
+        case ADD_TASK:
+            return {
+                ...state
             }
 
         default:

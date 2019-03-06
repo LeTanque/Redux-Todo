@@ -457,10 +457,13 @@ h1.heading-title svg {
 .update-form button {
   margin-top: 0;
 }
+.todo-form {
+  margin-top: 50px;
+}
 .todo-list {
   margin: 0 auto;
   margin-top: 20px;
-  max-width: 600px;
+  max-width: 400px;
 }
 .todo-list li {
   font-size: 2rem;
