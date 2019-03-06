@@ -2,7 +2,8 @@
 
 ## FRANK MARTINEZ BRANCH
 
-(See me in action!)[https://awesome-lalande-4355ad.netlify.com/]
+Check out this app in action
+[https://awesome-lalande-4355ad.netlify.com/]
 
 Topics:
 
