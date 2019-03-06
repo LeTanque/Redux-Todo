@@ -25,9 +25,8 @@ class Title extends Component {
         this.setState({ editing:false });
     }
     
+
     render() {
-        // console.log(this.state)
-        // console.log(this.props.updateTitle)
         return (
             <Fragment>
                 

@@ -431,6 +431,12 @@ a:hover {
   font-style: italic;
   color: rgba(55, 55, 55, 0.5);
 }
+.display-none {
+  display: none;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
 body {
   background: linear-gradient(-33deg, #aa4b6b, #6b6b83, #3b8d99);
   height: 97.5vh;

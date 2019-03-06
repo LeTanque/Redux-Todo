@@ -5,7 +5,6 @@ import { IoMdClose } from 'react-icons/io';
 import {markTaskComplete, clearCompleted, addTask, removeTask} from './actions'
 
 
-
 // Yes, yes, I know, this is one BIG component with ALL my redux crammed into it!
 // But, my argument here is, Redux is already a whole lot more typing. I can break these
 // into individual components, that's actually trivial at this point.
@@ -44,8 +43,6 @@ class TodoList extends Component {
     }
 
     render() {
-        console.log(this.props);
-        
         return (
             <Fragment>
 
@@ -71,16 +68,19 @@ class TodoList extends Component {
                                 className={`task ${item.completed ? "completed" : ""}`}
                             >
                                 {item.todoItem}
-                                <span className='close-btn'><IoMdClose onClick={()=>this.removeTask(item.id)}/></span>
+                                <span 
+                                    className="close-btn"
+                                ><IoMdClose onClick={()=>this.removeTask(item.id)}/></span>
                             </li>
                         </Fragment>
 
                     ))}
 
                 </ul>
-
-                <button 
-                    className="btn-danger"
+                
+                {/* Button only shows if there are tasks in the todoList props state store array */}
+                <button     
+                    className={`btn-danger ${this.props.todoList.length ? "" : "display-none"}`}
                     onClick={this.clearCompleted}
                 >
                     clear
@@ -91,11 +91,12 @@ class TodoList extends Component {
     }
 }
 
+// This does exactly what the variable describes. Maps state to props.
 const mapStateToProps = state => ({
     todoList: state.todoList
 })
 
-
+// This clever little redux jewel pipes the map in with the actions and wraps em around the component
 export default connect(
     mapStateToProps,
     {markTaskComplete, clearCompleted, addTask, removeTask}

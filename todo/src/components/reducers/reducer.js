@@ -1,26 +1,10 @@
 // You don't even need this if you use the new action syntax
-import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED} from '../actions'
+import { UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED } from '../actions'
 
 
 const initialState = {
     title: 'Todo List',
-    todoList: [
-        {
-            id: 0,
-            todoItem: 'Sample Task',
-            completed: false
-        },
-        {
-            id: 1,
-            todoItem: 'Sample Task 2',
-            completed: false
-        },
-        {
-            id: 2,
-            todoItem: 'Sample Task 3',
-            completed: false
-        }
-    ]
+    todoList: []
 }
 
 function reducer(state = initialState, action) {
