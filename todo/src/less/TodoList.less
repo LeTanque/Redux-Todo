@@ -1,14 +1,19 @@
 .todo-form {
-    margin-top: 50px;
+    margin: 80px 0;
 }
 form {
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
     input {
         background-color: @clear-color;
         color: @white;
         font-weight: bolder;
         .box-shadow(0;0;8px;0;@light-gray);
+        margin: 0;
+        width: 100%;
         &::placeholder {
-            color: @white;
+            color: @light-gray;
             font-weight: 400;
         }
     }
@@ -24,6 +29,12 @@ form {
         margin: 20px;
         padding: 10px;
         background-color: @clear-color;
+        .close-btn {
+            color: @red;
+            position: relative;
+            float: right;
+            cursor: pointer ;
+        }
     }
     .completed {
         background-color: @light;

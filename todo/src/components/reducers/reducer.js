@@ -1,11 +1,23 @@
+// You don't even need this if you use the new action syntax
 import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED} from '../actions'
+
 
 const initialState = {
     title: 'Todo List',
     todoList: [
         {
             id: 0,
-            todoItem: 'Sample Task (click, then clear)',
+            todoItem: 'Sample Task',
+            completed: false
+        },
+        {
+            id: 1,
+            todoItem: 'Sample Task 2',
+            completed: false
+        },
+        {
+            id: 2,
+            todoItem: 'Sample Task 3',
             completed: false
         }
     ]
@@ -46,7 +58,7 @@ function reducer(state = initialState, action) {
                 })
             }
 
-        case "ADD_TASK":
+        case "ADD_TASK": // Maka the new task
             const newTodo = {
                 id: Date.now(),
                 todoItem: action.payload,
@@ -58,6 +70,16 @@ function reducer(state = initialState, action) {
                     ...state.todoList,
                     newTodo
                 ]
+            }
+
+        case 'REMOVE_TASK': // This reducer creates a new array with the correct filtered from payload tasks
+            const newTodoListArr = state.todoList.filter(task => {
+                return task.id !== action.payload
+            })
+            return {
+                ...state,
+                todoList: newTodoListArr
+                    
             }
 
         default:

@@ -27,7 +27,6 @@ export function clearCompleted(clearCompleted) {
 }
 
 // export const ADD_TASK = 'ADD_TASK';
-
 // export function addTask(newTask) {
 //     return {
 //         type: ADD_TASK,
@@ -35,9 +34,17 @@ export function clearCompleted(clearCompleted) {
 //     }
 // }
 
+// Cool new cleaner way to do actions from Jordan
 export const addTask = (newTask) => {
     return {
         type: 'ADD_TASK',
         payload: newTask
+    }
+}
+
+export const removeTask = (id) => {
+    return {
+        type: 'REMOVE_TASK',
+        payload: id
     }
 }

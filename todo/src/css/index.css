@@ -439,6 +439,11 @@ body {
   text-align: center;
   margin: 20px;
 }
+h1.heading-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 3.6rem;
+}
 h1.heading-title svg {
   font-size: 1.6rem;
 }
@@ -456,16 +461,23 @@ h1.heading-title svg {
   margin-top: 0;
 }
 .todo-form {
-  margin-top: 50px;
+  margin: 80px 0;
+}
+form {
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
 }
 form input {
   background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   font-weight: bolder;
   box-shadow: 0 0 8px 0 rgba(55, 55, 55, 0.5);
+  margin: 0;
+  width: 100%;
 }
 form input::placeholder {
-  color: #ffffff;
+  color: rgba(55, 55, 55, 0.5);
   font-weight: 400;
 }
 .todo-list {
@@ -479,6 +491,12 @@ form input::placeholder {
   margin: 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.15);
+}
+.todo-list li .close-btn {
+  color: #dd1111;
+  position: relative;
+  float: right;
+  cursor: pointer ;
 }
 .todo-list .completed {
   background-color: #aaaaaa;
