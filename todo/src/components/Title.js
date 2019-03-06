@@ -33,7 +33,7 @@ class Title extends Component {
                 {!this.state.editing ? (
                     <h1 className="heading-title">
                         {this.props.title}{" "}
-                        <FaEdit onClick={() => this.setState({editing:true})} className='' />
+                        <span><FaEdit onClick={() => this.setState({editing:true})} className='' /></span>
                     </h1>
                 ) : (
                     <section className='update-form'>

@@ -1,10 +1,16 @@
 h1.heading-title {
-    text-transform: uppercase;
-    letter-spacing: 5px;
     font-size: 3.6rem;
-    svg {
-        font-size: 1.6rem;
+    font-weight: bolder;
+    span {
+        position: absolute;
+        margin-left: 10px;
+        svg {
+            color: @clear-color;
+            font-size: 2rem;
+            vertical-align: middle;
+        }
     }
+    
 }
 .update-form {
     display: flex;
@@ -14,6 +20,11 @@ h1.heading-title {
         border: none;
         font-size: 2rem;
         padding: 5px;
+        text-align: center;
+        font-size: 3.6rem;
+        background-color: unset;
+        border-bottom: 1px solid @clear-color;
+        box-shadow: none;
     }
     button {
         margin-top: 0;

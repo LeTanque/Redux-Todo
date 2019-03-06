@@ -439,19 +439,24 @@ a:hover {
 }
 body {
   background: linear-gradient(-33deg, #aa4b6b, #6b6b83, #3b8d99);
-  height: 97.5vh;
+  height: calc(100vh - 60px);
 }
 .App {
   text-align: center;
-  margin: 20px;
+  margin: 60px 20px 20px 20px;
 }
 h1.heading-title {
-  text-transform: uppercase;
-  letter-spacing: 5px;
   font-size: 3.6rem;
+  font-weight: bolder;
 }
-h1.heading-title svg {
-  font-size: 1.6rem;
+h1.heading-title span {
+  position: absolute;
+  margin-left: 10px;
+}
+h1.heading-title span svg {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 2rem;
+  vertical-align: middle;
 }
 .update-form {
   display: flex;
@@ -462,6 +467,11 @@ h1.heading-title svg {
   border: none;
   font-size: 2rem;
   padding: 5px;
+  text-align: center;
+  font-size: 3.6rem;
+  background-color: unset;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: none;
 }
 .update-form button {
   margin-top: 0;

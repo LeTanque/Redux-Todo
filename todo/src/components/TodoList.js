@@ -12,9 +12,6 @@ import {markTaskComplete, clearCompleted, addTask, removeTask} from './actions'
 // But for this demo/learning tool, etc, it's MUCH simpler to just keep most functionality
 // in one file. Easier to reference, easier to see what's going on, and I think easier
 // to learn with. 
-// I have shared this opinion with no one, I don't want to influence the way other people
-// learn because, for all I know, it's better for someone else to create all the components
-// for the first time. 
 class TodoList extends Component {
     state = {
         taskInput:''
@@ -77,7 +74,7 @@ class TodoList extends Component {
                     ))}
 
                 </ul>
-                
+
                 {/* Button only shows if there are tasks in the todoList props state store array */}
                 <button     
                     className={`btn-danger ${this.props.todoList.length ? "" : "display-none"}`}
