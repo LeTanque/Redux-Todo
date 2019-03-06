@@ -6,7 +6,8 @@ import {markTaskComplete, clearCompleted, addTask} from './actions'
 
 class TodoList extends Component {
     state = {
-        newMember: ''
+        // newMember:'',
+        taskInput:''
     };
 
 
@@ -18,9 +19,16 @@ class TodoList extends Component {
         this.props.clearCompleted();
     }
 
-    addTask = () => {
-        this.props.addTask();
+    handleSubmit = event => {
+        event.preventDefault();
+        this.props.addTask(this.state.taskInput);
+        this.setState({taskInput:''});
     }
+
+
+    handleInput = event => {
+        this.setState({ taskInput: event.target.value });
+    };
 
     render() {
         console.log(this.props);
@@ -29,8 +37,14 @@ class TodoList extends Component {
             <Fragment>
 
                 <section  className='todo-form'>
-                    <form>
-                        <input placeholder='New task...' />
+                    <form onSubmit={this.handleSubmit} >
+                        <input 
+                            type='text'
+                            name='newTask'
+                            placeholder='New task...'
+                            value={this.state.taskInput}
+                            onChange={this.handleInput}
+                        />
                     </form>
                 </section>
 

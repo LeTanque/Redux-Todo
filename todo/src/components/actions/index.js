@@ -26,11 +26,18 @@ export function clearCompleted(clearCompleted) {
     }
 }
 
-export const ADD_TASK = 'ADD_TASK';
+// export const ADD_TASK = 'ADD_TASK';
 
-export function addTask(newTask) {
+// export function addTask(newTask) {
+//     return {
+//         type: ADD_TASK,
+//         payload: newTask
+//     }
+// }
+
+export const addTask = (newTask) => {
     return {
-        type: ADD_TASK,
+        type: 'ADD_TASK',
         payload: newTask
     }
 }

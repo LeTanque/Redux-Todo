@@ -38,14 +38,15 @@ class Title extends Component {
                     </h1>
                 ) : (
                     <section className='update-form'>
-                        <input
-                            className="title-input"
-                            type="text"
-                            name="newTitleText"
-                            value={this.state.newTitleText}
-                            onChange={this.handleChanges}
-                        />
-                        <button onClick={this.updateTitle} className='btn-primary'>Update title</button>
+                        <form onSubmit={this.updateTitle}>
+                            <input
+                                className="title-input"
+                                type="text"
+                                name="newTitleText"
+                                value={this.state.newTitleText}
+                                onChange={this.handleChanges}
+                            />
+                        </form>                    
                     </section>
                 )}
                 <div className='brand-title'></div>

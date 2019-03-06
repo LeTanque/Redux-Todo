@@ -1,16 +1,11 @@
-import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED, ADD_TASK} from '../actions'
+import {UPDATE_TITLE, MARK_TASK_COMPLETE, CLEAR_COMPLETED} from '../actions'
 
 const initialState = {
     title: 'Todo List',
     todoList: [
         {
             id: 0,
-            todoItem: 'first task',
-            completed: false
-        },
-        {
-            id: 1,
-            todoItem: 'second task',
+            todoItem: 'Sample Task (click, then clear)',
             completed: false
         }
     ]
@@ -39,7 +34,6 @@ function reducer(state = initialState, action) {
             }
 
         case CLEAR_COMPLETED:
-        console.log(state)
             return {
                 ...state,
                 todoList: state.todoList.filter(task => {
@@ -48,12 +42,22 @@ function reducer(state = initialState, action) {
                             ...task,
                         }
                     }
+                    return !task
                 })
             }
 
-        case ADD_TASK:
+        case "ADD_TASK":
+            const newTodo = {
+                id: Date.now(),
+                todoItem: action.payload,
+                completed: false
+            }
             return {
-                ...state
+                ...state,
+                todoList: [
+                    ...state.todoList,
+                    newTodo
+                ]
             }
 
         default:
